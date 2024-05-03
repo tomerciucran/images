@@ -18,6 +18,8 @@
 		F113B6FC2BE5138A00FC8692 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B6FB2BE5138A00FC8692 /* Photo.swift */; };
 		F113B6FE2BE5145100FC8692 /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B6FD2BE5145100FC8692 /* PhotosService.swift */; };
 		F113B7012BE52CA200FC8692 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F113B7002BE52CA200FC8692 /* Kingfisher */; };
+		F113B7032BE52EC000FC8692 /* ImagesGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7022BE52EC000FC8692 /* ImagesGrid.swift */; };
+		F113B7052BE52EDC00FC8692 /* ImagesGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7042BE52EDC00FC8692 /* ImagesGridViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		F113B6F92BE5132300FC8692 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		F113B6FB2BE5138A00FC8692 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F113B6FD2BE5145100FC8692 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
+		F113B7022BE52EC000FC8692 /* ImagesGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesGrid.swift; sourceTree = "<group>"; };
+		F113B7042BE52EDC00FC8692 /* ImagesGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesGridViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				F113B6F92BE5132300FC8692 /* URLSessionProtocol.swift */,
 				F113B6FB2BE5138A00FC8692 /* Photo.swift */,
 				F113B6FD2BE5145100FC8692 /* PhotosService.swift */,
+				F113B7022BE52EC000FC8692 /* ImagesGrid.swift */,
+				F113B7042BE52EDC00FC8692 /* ImagesGridViewModel.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -270,6 +276,8 @@
 			files = (
 				F113B6FA2BE5132300FC8692 /* URLSessionProtocol.swift in Sources */,
 				F113B6CA2BE50C2A00FC8692 /* AppDelegate.swift in Sources */,
+				F113B7052BE52EDC00FC8692 /* ImagesGridViewModel.swift in Sources */,
+				F113B7032BE52EC000FC8692 /* ImagesGrid.swift in Sources */,
 				F113B6CC2BE50C2A00FC8692 /* SceneDelegate.swift in Sources */,
 				F113B6FE2BE5145100FC8692 /* PhotosService.swift in Sources */,
 				F113B6FC2BE5138A00FC8692 /* Photo.swift in Sources */,
