@@ -26,6 +26,11 @@
 		F113B7112BE7B1D700FC8692 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7102BE7B1D700FC8692 /* TabBarCoordinator.swift */; };
 		F113B7132BE8CDF500FC8692 /* FavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7122BE8CDF500FC8692 /* FavoritesStore.swift */; };
 		F113B7152BE8DDF700FC8692 /* FavoritesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7142BE8DDF700FC8692 /* FavoritesStoreTests.swift */; };
+		F113B7172BE8E55A00FC8692 /* ImageDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7162BE8E55A00FC8692 /* ImageDetailViewModelTests.swift */; };
+		F113B7192BE8E63900FC8692 /* MockFavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7182BE8E63900FC8692 /* MockFavoritesStore.swift */; };
+		F113B71B2BE8EB1A00FC8692 /* MockPhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B71A2BE8EB1A00FC8692 /* MockPhotosService.swift */; };
+		F113B71D2BE8EBD800FC8692 /* MockImageDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B71C2BE8EBD800FC8692 /* MockImageDetailCoordinator.swift */; };
+		F113B71F2BE8EC8100FC8692 /* ImagesGridViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B71E2BE8EC8100FC8692 /* ImagesGridViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,11 @@
 		F113B7102BE7B1D700FC8692 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		F113B7122BE8CDF500FC8692 /* FavoritesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStore.swift; sourceTree = "<group>"; };
 		F113B7142BE8DDF700FC8692 /* FavoritesStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStoreTests.swift; sourceTree = "<group>"; };
+		F113B7162BE8E55A00FC8692 /* ImageDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModelTests.swift; sourceTree = "<group>"; };
+		F113B7182BE8E63900FC8692 /* MockFavoritesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavoritesStore.swift; sourceTree = "<group>"; };
+		F113B71A2BE8EB1A00FC8692 /* MockPhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotosService.swift; sourceTree = "<group>"; };
+		F113B71C2BE8EBD800FC8692 /* MockImageDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageDetailCoordinator.swift; sourceTree = "<group>"; };
+		F113B71E2BE8EC8100FC8692 /* ImagesGridViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesGridViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +153,11 @@
 			children = (
 				F113B6E02BE50C2B00FC8692 /* ImagesTests.swift */,
 				F113B7142BE8DDF700FC8692 /* FavoritesStoreTests.swift */,
+				F113B7162BE8E55A00FC8692 /* ImageDetailViewModelTests.swift */,
+				F113B7182BE8E63900FC8692 /* MockFavoritesStore.swift */,
+				F113B71A2BE8EB1A00FC8692 /* MockPhotosService.swift */,
+				F113B71C2BE8EBD800FC8692 /* MockImageDetailCoordinator.swift */,
+				F113B71E2BE8EC8100FC8692 /* ImagesGridViewModelTests.swift */,
 			);
 			path = ImagesTests;
 			sourceTree = "<group>";
@@ -311,8 +326,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F113B71D2BE8EBD800FC8692 /* MockImageDetailCoordinator.swift in Sources */,
 				F113B6E12BE50C2B00FC8692 /* ImagesTests.swift in Sources */,
+				F113B71F2BE8EC8100FC8692 /* ImagesGridViewModelTests.swift in Sources */,
+				F113B7192BE8E63900FC8692 /* MockFavoritesStore.swift in Sources */,
 				F113B7152BE8DDF700FC8692 /* FavoritesStoreTests.swift in Sources */,
+				F113B7172BE8E55A00FC8692 /* ImageDetailViewModelTests.swift in Sources */,
+				F113B71B2BE8EB1A00FC8692 /* MockPhotosService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

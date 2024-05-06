@@ -23,6 +23,7 @@ final class ImagesGridViewModel: ObservableObject {
         do {
             images = try await service.fetchPhotos()
         } catch {
+            //TODO: Handle the error on ImageDetailView by displaying an alert. Try using a published property.
             print(error)
         }
     }
