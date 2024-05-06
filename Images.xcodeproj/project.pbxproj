@@ -20,6 +20,10 @@
 		F113B7012BE52CA200FC8692 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F113B7002BE52CA200FC8692 /* Kingfisher */; };
 		F113B7032BE52EC000FC8692 /* ImagesGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7022BE52EC000FC8692 /* ImagesGrid.swift */; };
 		F113B7052BE52EDC00FC8692 /* ImagesGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7042BE52EDC00FC8692 /* ImagesGridViewModel.swift */; };
+		F113B7092BE7A71800FC8692 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7082BE7A71800FC8692 /* ImageDetailView.swift */; };
+		F113B70B2BE7A7DD00FC8692 /* ImageDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B70A2BE7A7DD00FC8692 /* ImageDetailCoordinator.swift */; };
+		F113B70F2BE7AFEF00FC8692 /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B70E2BE7AFEF00FC8692 /* ImageDetailViewModel.swift */; };
+		F113B7112BE7B1D700FC8692 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7102BE7B1D700FC8692 /* TabBarCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		F113B6FD2BE5145100FC8692 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
 		F113B7022BE52EC000FC8692 /* ImagesGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesGrid.swift; sourceTree = "<group>"; };
 		F113B7042BE52EDC00FC8692 /* ImagesGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesGridViewModel.swift; sourceTree = "<group>"; };
+		F113B7082BE7A71800FC8692 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
+		F113B70A2BE7A7DD00FC8692 /* ImageDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailCoordinator.swift; sourceTree = "<group>"; };
+		F113B70E2BE7AFEF00FC8692 /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
+		F113B7102BE7B1D700FC8692 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 			children = (
 				F113B6C92BE50C2A00FC8692 /* AppDelegate.swift */,
 				F113B6CB2BE50C2A00FC8692 /* SceneDelegate.swift */,
+				F113B7102BE7B1D700FC8692 /* TabBarCoordinator.swift */,
 				F113B6D22BE50C2B00FC8692 /* Assets.xcassets */,
 				F113B6D42BE50C2B00FC8692 /* LaunchScreen.storyboard */,
 				F113B6D72BE50C2B00FC8692 /* Info.plist */,
@@ -117,6 +126,9 @@
 				F113B6FD2BE5145100FC8692 /* PhotosService.swift */,
 				F113B7022BE52EC000FC8692 /* ImagesGrid.swift */,
 				F113B7042BE52EDC00FC8692 /* ImagesGridViewModel.swift */,
+				F113B7082BE7A71800FC8692 /* ImageDetailView.swift */,
+				F113B70E2BE7AFEF00FC8692 /* ImageDetailViewModel.swift */,
+				F113B70A2BE7A7DD00FC8692 /* ImageDetailCoordinator.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -275,10 +287,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F113B6FA2BE5132300FC8692 /* URLSessionProtocol.swift in Sources */,
+				F113B7092BE7A71800FC8692 /* ImageDetailView.swift in Sources */,
 				F113B6CA2BE50C2A00FC8692 /* AppDelegate.swift in Sources */,
 				F113B7052BE52EDC00FC8692 /* ImagesGridViewModel.swift in Sources */,
 				F113B7032BE52EC000FC8692 /* ImagesGrid.swift in Sources */,
+				F113B70F2BE7AFEF00FC8692 /* ImageDetailViewModel.swift in Sources */,
+				F113B7112BE7B1D700FC8692 /* TabBarCoordinator.swift in Sources */,
 				F113B6CC2BE50C2A00FC8692 /* SceneDelegate.swift in Sources */,
+				F113B70B2BE7A7DD00FC8692 /* ImageDetailCoordinator.swift in Sources */,
 				F113B6FE2BE5145100FC8692 /* PhotosService.swift in Sources */,
 				F113B6FC2BE5138A00FC8692 /* Photo.swift in Sources */,
 			);

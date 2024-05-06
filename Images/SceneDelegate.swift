@@ -10,13 +10,13 @@ import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
+    private let tabBarCoordinator = TabBarCoordinator()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        let gridView = ImagesGrid(viewModel: ImagesGridViewModel())
-        window?.rootViewController = UIHostingController(rootView: gridView)
+        window?.rootViewController = tabBarCoordinator.tabBarController
         window?.makeKeyAndVisible()
     }
 

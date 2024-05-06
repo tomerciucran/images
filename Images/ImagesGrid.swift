@@ -10,6 +10,7 @@ import Kingfisher
 
 struct ImagesGrid: View {
     @ObservedObject var viewModel: ImagesGridViewModel
+    let onImageTap: (Photo) -> Void
     
     var body: some View {
         ScrollView {
@@ -26,6 +27,9 @@ struct ImagesGrid: View {
                         }
                         .retry(maxCount: 3, interval: .seconds(2))
                         .frame(minWidth: 150, minHeight: 150)
+                        .onTapGesture {
+                            onImageTap(image)
+                        }
                 }
             }
         }

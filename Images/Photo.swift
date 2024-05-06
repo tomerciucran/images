@@ -12,4 +12,8 @@ struct Photo: Decodable, Identifiable {
     let title: String
     let url: String
     let thumbnailUrl: String
+    
+    var isFavorite: Bool {
+        return false
+    }
 }

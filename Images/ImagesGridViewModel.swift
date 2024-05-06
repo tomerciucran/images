@@ -9,10 +9,14 @@ import Foundation
 
 final class ImagesGridViewModel: ObservableObject {
     private let service: PhotosServiceProtocol
+    private let imageDetailCoordinator: ImageDetailCoordinating
+    
     @Published private(set) var images: [Photo] = []
     
-    init(service: PhotosServiceProtocol = PhotosService()) {
+    init(service: PhotosServiceProtocol = PhotosService(),
+         imageDetailCoordinator: ImageDetailCoordinating) {
         self.service = service
+        self.imageDetailCoordinator = imageDetailCoordinator
     }
     
     func fetchImages() async {
