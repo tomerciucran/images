@@ -19,11 +19,9 @@ final class ImageDetailCoordinator: ImageDetailCoordinating {
     
     func openFullScreenImage(with photo: Photo) {
         let viewModel = ImageDetailViewModel(photo: photo)
-        let fullScreenImageView = ImageDetailView(viewModel: viewModel) {
-            viewModel.handleFavoriteButtonTap()
-        }
+        let imageDetailView = ImageDetailView(viewModel: viewModel)
         
-        let hostingViewController = UIHostingController(rootView: fullScreenImageView)
+        let hostingViewController = UIHostingController(rootView: imageDetailView)
         
         sourceController?().show(hostingViewController, sender: nil)
     }

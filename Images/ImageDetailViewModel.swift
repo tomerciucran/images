@@ -7,18 +7,32 @@
 
 import Foundation
 
-struct ImageDetailViewModel {
-    let photo: Photo
+final class ImageDetailViewModel: ObservableObject {
+    private let photo: Photo
+    private let favoritesStore: FavoritesStoreProtocol
+    @Published var isFavorite: Bool
+    
+    init(photo: Photo,
+         favoritesStore: FavoritesStoreProtocol = FavoritesStore()) {
+        self.photo = photo
+        self.favoritesStore = favoritesStore
+        isFavorite = favoritesStore.favorites.contains(photo.id)
+    }
     
     var url: URL? {
         return URL(string: photo.url)
     }
     
-    var isFavorite: Bool {
-        return photo.isFavorite
+    func handleFavoriteButtonTap() {
+        if isFavorite {
+            favoritesStore.removeFavorite(with: photo.id)
+        } else {
+            favoritesStore.addFavorite(with: photo.id)
+        }
+        updateIsFavorite()
     }
     
-    func handleFavoriteButtonTap() {
-        print("Image Detail Favorite Button Tapped")
+    private func updateIsFavorite() {
+        isFavorite = favoritesStore.favorites.contains(photo.id)
     }
 }

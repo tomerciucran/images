@@ -9,8 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct ImageDetailView: View {
-    let viewModel: ImageDetailViewModel
-    let favoriteButtonTapped: () -> Void
+    @ObservedObject var viewModel: ImageDetailViewModel
     
     var body: some View {
         NavigationStack {
@@ -18,7 +17,7 @@ struct ImageDetailView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .toolbar {
                     Button(viewModel.isFavorite ? "Unfavorite" : "Favorite") {
-                        favoriteButtonTapped()
+                        viewModel.handleFavoriteButtonTap()
                     }
                 }
         }

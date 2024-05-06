@@ -15,9 +15,7 @@ final class TabBarCoordinator {
     init() {
         let imageDetailCoordinator = ImageDetailCoordinator()
         let gridViewModel = ImagesGridViewModel(imageDetailCoordinator: imageDetailCoordinator)
-        let gridView = ImagesGrid(viewModel: gridViewModel) { image in
-            imageDetailCoordinator.openFullScreenImage(with: image)
-        }
+        let gridView = ImagesGrid(viewModel: gridViewModel)
         
         let tabBarController = UITabBarController()
         let imagesGridViewController = UIHostingController(rootView: gridView)
