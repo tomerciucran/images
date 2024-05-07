@@ -30,6 +30,9 @@
 		F113B71F2BE8EC8100FC8692 /* ImagesGridViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B71E2BE8EC8100FC8692 /* ImagesGridViewModelTests.swift */; };
 		F113B7212BE90F4D00FC8692 /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7202BE90F4D00FC8692 /* FavoritesListView.swift */; };
 		F113B7232BE90F6600FC8692 /* FavoritesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7222BE90F6600FC8692 /* FavoritesListViewModel.swift */; };
+		F113B7282BEA2C4600FC8692 /* FavoritesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7272BEA2C4600FC8692 /* FavoritesListViewModelTests.swift */; };
+		F113B72A2BEA36C800FC8692 /* PhotosServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B7292BEA36C800FC8692 /* PhotosServiceTests.swift */; };
+		F113B72C2BEA36EB00FC8692 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113B72B2BEA36EB00FC8692 /* MockURLSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		F113B71E2BE8EC8100FC8692 /* ImagesGridViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesGridViewModelTests.swift; sourceTree = "<group>"; };
 		F113B7202BE90F4D00FC8692 /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
 		F113B7222BE90F6600FC8692 /* FavoritesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewModel.swift; sourceTree = "<group>"; };
+		F113B7272BEA2C4600FC8692 /* FavoritesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewModelTests.swift; sourceTree = "<group>"; };
+		F113B7292BEA36C800FC8692 /* PhotosServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosServiceTests.swift; sourceTree = "<group>"; };
+		F113B72B2BEA36EB00FC8692 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,9 @@
 				F113B71A2BE8EB1A00FC8692 /* MockPhotosService.swift */,
 				F113B71C2BE8EBD800FC8692 /* MockImageDetailCoordinator.swift */,
 				F113B71E2BE8EC8100FC8692 /* ImagesGridViewModelTests.swift */,
+				F113B7272BEA2C4600FC8692 /* FavoritesListViewModelTests.swift */,
+				F113B7292BEA36C800FC8692 /* PhotosServiceTests.swift */,
+				F113B72B2BEA36EB00FC8692 /* MockURLSession.swift */,
 			);
 			path = ImagesTests;
 			sourceTree = "<group>";
@@ -299,6 +308,9 @@
 				F113B71F2BE8EC8100FC8692 /* ImagesGridViewModelTests.swift in Sources */,
 				F113B7192BE8E63900FC8692 /* MockFavoritesStore.swift in Sources */,
 				F113B7152BE8DDF700FC8692 /* FavoritesStoreTests.swift in Sources */,
+				F113B72A2BEA36C800FC8692 /* PhotosServiceTests.swift in Sources */,
+				F113B7282BEA2C4600FC8692 /* FavoritesListViewModelTests.swift in Sources */,
+				F113B72C2BEA36EB00FC8692 /* MockURLSession.swift in Sources */,
 				F113B7172BE8E55A00FC8692 /* ImageDetailViewModelTests.swift in Sources */,
 				F113B71B2BE8EB1A00FC8692 /* MockPhotosService.swift in Sources */,
 			);
