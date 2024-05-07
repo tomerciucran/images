@@ -29,6 +29,6 @@ final class ImagesGridViewModel: ObservableObject {
     }
     
     func handleImageTap(image: Photo) {
-        imageDetailCoordinator.openFullScreenImage(with: image)
+        imageDetailCoordinator.openFullScreenImage(with: image) {}
     }
 }

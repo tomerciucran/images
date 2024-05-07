@@ -13,7 +13,7 @@ final class MockImageDetailCoordinator: ImageDetailCoordinating {
     var sourceController: (() -> UIViewController)?
     var lastOpenedPhoto: Photo?
     
-    func openFullScreenImage(with photo: Photo) {
+    func openFullScreenImage(with photo: Photo, dismissalHandler: @escaping () -> Void) {
         lastOpenedPhoto = photo
     }
 }

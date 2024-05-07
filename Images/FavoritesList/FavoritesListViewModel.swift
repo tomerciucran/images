@@ -19,7 +19,9 @@ final class FavoritesListViewModel: ObservableObject {
     }
     
     func handleTap(on image: Photo) {
-        imageDetailCoordinator.openFullScreenImage(with: image)
+        imageDetailCoordinator.openFullScreenImage(with: image) { [weak self] in
+            self?.updateFavorites()
+        }
     }
     
     func updateFavorites() {

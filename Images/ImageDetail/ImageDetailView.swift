@@ -10,6 +10,7 @@ import Kingfisher
 
 struct ImageDetailView: View {
     @ObservedObject var viewModel: ImageDetailViewModel
+    let onDismiss: () -> Void
     
     var body: some View {
         NavigationStack {
@@ -19,6 +20,9 @@ struct ImageDetailView: View {
                     Button(viewModel.isFavorite ? "Unfavorite" : "Favorite") {
                         viewModel.handleFavoriteButtonTap()
                     }
+                }
+                .onDisappear {
+                    onDismiss()
                 }
         }
     }

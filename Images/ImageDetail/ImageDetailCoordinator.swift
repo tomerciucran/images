@@ -11,15 +11,17 @@ import SwiftUI
 
 protocol ImageDetailCoordinating {
     var sourceController: (() -> UIViewController)? { get set }
-    func openFullScreenImage(with photo: Photo)
+    func openFullScreenImage(with photo: Photo, dismissalHandler: @escaping () -> Void)
 }
 
 final class ImageDetailCoordinator: ImageDetailCoordinating {
     var sourceController: (() -> UIViewController)?
     
-    func openFullScreenImage(with photo: Photo) {
+    func openFullScreenImage(with photo: Photo, dismissalHandler: @escaping () -> Void) {
         let viewModel = ImageDetailViewModel(photo: photo)
-        let imageDetailView = ImageDetailView(viewModel: viewModel)
+        let imageDetailView = ImageDetailView(viewModel: viewModel) {
+            dismissalHandler()
+        }
         
         let hostingViewController = UIHostingController(rootView: imageDetailView)
         
