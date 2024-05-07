@@ -16,7 +16,7 @@ final class ImageDetailViewModel: ObservableObject {
          favoritesStore: FavoritesStoreProtocol = FavoritesStore()) {
         self.photo = photo
         self.favoritesStore = favoritesStore
-        isFavorite = favoritesStore.favorites.contains(photo.id)
+        isFavorite = favoritesStore.favorites.contains(photo)
     }
     
     var url: URL? {
@@ -27,12 +27,12 @@ final class ImageDetailViewModel: ObservableObject {
         if isFavorite {
             favoritesStore.removeFavorite(with: photo.id)
         } else {
-            favoritesStore.addFavorite(with: photo.id)
+            favoritesStore.addFavorite(photo)
         }
         updateIsFavorite()
     }
     
     private func updateIsFavorite() {
-        isFavorite = favoritesStore.favorites.contains(photo.id)
+        isFavorite = favoritesStore.favorites.contains(photo)
     }
 }

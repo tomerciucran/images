@@ -9,17 +9,21 @@ import Foundation
 @testable import Images
 
 final class MockFavoritesStore: FavoritesStoreProtocol {
-    private var favoritesSet: Set<Int> = []
+    var customFavorites: Set<Photo> = []
     
-    func addFavorite(with id: Int) {
-        favoritesSet.insert(id)
+    func addFavorite(_ photo: Photo) {
+        customFavorites.insert(photo)
     }
     
     func removeFavorite(with id: Int) {
-        favoritesSet.remove(id)
+        if let item = favorites.first(where: { id == $0.id }) {
+            customFavorites.remove(item)
+        }
     }
     
-    var favorites: [Int] {
-        return Array(favoritesSet)
+    var favorites: [Images.Photo] {
+        return Array(customFavorites)
     }
+    
+    
 }

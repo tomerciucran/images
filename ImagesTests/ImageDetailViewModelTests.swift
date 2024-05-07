@@ -29,7 +29,7 @@ final class ImageDetailViewModelTests: XCTestCase {
     func test_init() {
         XCTAssertFalse(sut.isFavorite)
         
-        favoritesStore.addFavorite(with: samplePhoto.id)
+        favoritesStore.addFavorite(samplePhoto)
         sut = ImageDetailViewModel(photo: samplePhoto, favoritesStore: favoritesStore)
         
         XCTAssertTrue(sut.isFavorite)

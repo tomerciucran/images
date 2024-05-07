@@ -17,8 +17,8 @@ struct FavoritesListView: View {
                     viewModel.handleTap(on: favorite)
                 }
         }
-        .task {
-            await viewModel.fetchImages()
+        .onAppear {
+            viewModel.updateFavorites()
         }
     }
 }
