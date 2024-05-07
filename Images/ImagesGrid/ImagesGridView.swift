@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct ImagesGrid: View {
+struct ImagesGridView: View {
     @ObservedObject var viewModel: ImagesGridViewModel
     
     var body: some View {

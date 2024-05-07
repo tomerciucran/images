@@ -15,17 +15,19 @@ final class TabBarCoordinator {
     init() {
         let imageDetailCoordinator = ImageDetailCoordinator()
         let gridViewModel = ImagesGridViewModel(imageDetailCoordinator: imageDetailCoordinator)
-        let gridView = ImagesGrid(viewModel: gridViewModel)
+        let gridView = ImagesGridView(viewModel: gridViewModel)
         
         let tabBarController = UITabBarController()
         let imagesGridViewController = UIHostingController(rootView: gridView)
         imagesGridViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         
-        let favoritesViewController = UIViewController()
+        let favoritesListViewModel = FavoritesListViewModel(imageDetailCoordinator: imageDetailCoordinator)
+        let favoritesListView = FavoritesListView(viewModel: favoritesListViewModel)
+        let favoritesViewController = UIHostingController(rootView: favoritesListView)
         favoritesViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
         
         imageDetailCoordinator.sourceController = {
-            return imagesGridViewController
+            return tabBarController.selectedViewController ?? imagesGridViewController
         }
         
         tabBarController.viewControllers = [imagesGridViewController, favoritesViewController]
