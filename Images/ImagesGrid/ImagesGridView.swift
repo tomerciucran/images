@@ -35,5 +35,12 @@ struct ImagesGridView: View {
         .task {
             await viewModel.fetchImages()
         }
+        .alert("Error", isPresented: $viewModel.showsErrorAlert) {
+            Button("OK", role: .cancel) {
+                viewModel.showsErrorAlert = false
+            }
+        } message: {
+            Text(viewModel.error?.localizedDescription ?? "Unknown error")
+        }
     }
 }

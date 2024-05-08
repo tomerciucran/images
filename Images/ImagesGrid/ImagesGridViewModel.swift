@@ -12,6 +12,8 @@ final class ImagesGridViewModel: ObservableObject {
     private let imageDetailCoordinator: ImageDetailCoordinating
     
     @Published private(set) var images: [Photo] = []
+    @Published private(set) var error: Error?
+    @Published var showsErrorAlert = false
     
     init(service: PhotosServiceProtocol = PhotosService(),
          imageDetailCoordinator: ImageDetailCoordinating) {
@@ -26,8 +28,10 @@ final class ImagesGridViewModel: ObservableObject {
                 self.images = images
             }
         } catch {
-            //TODO: Handle the error on ImageGridView by displaying an alert.
-            print(error)
+            await MainActor.run {
+                self.error = error
+                showsErrorAlert = true
+            }
         }
     }
     
