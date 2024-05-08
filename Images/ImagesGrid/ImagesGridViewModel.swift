@@ -21,7 +21,10 @@ final class ImagesGridViewModel: ObservableObject {
     
     func fetchImages() async {
         do {
-            images = try await service.fetchPhotos()
+            let images = try await service.fetchPhotos()
+            await MainActor.run {
+                self.images = images
+            }
         } catch {
             //TODO: Handle the error on ImageGridView by displaying an alert.
             print(error)

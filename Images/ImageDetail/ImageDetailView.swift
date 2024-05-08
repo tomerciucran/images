@@ -10,6 +10,7 @@ import Kingfisher
 
 struct ImageDetailView: View {
     @ObservedObject var viewModel: ImageDetailViewModel
+    @Environment(\.dismiss) var dismiss
     let onDismiss: () -> Void
     
     var body: some View {
@@ -17,8 +18,15 @@ struct ImageDetailView: View {
             KFImage(viewModel.url)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .toolbar {
-                    Button(viewModel.isFavorite ? "Unfavorite" : "Favorite") {
-                        viewModel.handleFavoriteButtonTap()
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(viewModel.isFavorite ? "Unfavorite" : "Favorite") {
+                            viewModel.handleFavoriteButtonTap()
+                        }
+                    }
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button("Close") {
+                            dismiss()
+                        }
                     }
                 }
                 .onDisappear {
