@@ -11,14 +11,14 @@ import XCTest
 final class ImageDetailViewModelTests: XCTestCase {
     private var sut: ImageDetailViewModel!
     private var favoritesStore: MockFavoritesStore!
-    private let samplePhoto = Photo(id: 1,
-                                    title: "title",
-                                    url: "https://example.com/photo.jpg",
-                                    thumbnailUrl: "https://example.com/photo.jpg")
 
     override func setUpWithError() throws {
         favoritesStore = MockFavoritesStore()
-        sut = ImageDetailViewModel(photo: samplePhoto, favoritesStore: favoritesStore)
+        let photo = Photo(id: 1,
+                          title: "title",
+                          url: "https://example.com/photo.jpg",
+                          thumbnailUrl: "https://example.com/photo.jpg")
+        sut = ImageDetailViewModel(photo: photo, favoritesStore: favoritesStore)
     }
 
     override func tearDownWithError() throws {
@@ -29,8 +29,12 @@ final class ImageDetailViewModelTests: XCTestCase {
     func test_init() {
         XCTAssertFalse(sut.isFavorite)
         
-        favoritesStore.addFavorite(samplePhoto)
-        sut = ImageDetailViewModel(photo: samplePhoto, favoritesStore: favoritesStore)
+        let photo = Photo(id: 1,
+                          title: "title",
+                          url: "https://example.com/photo.jpg",
+                          thumbnailUrl: "https://example.com/photo.jpg")
+        favoritesStore.addFavorite(photo)
+        sut = ImageDetailViewModel(photo: photo, favoritesStore: favoritesStore)
         
         XCTAssertTrue(sut.isFavorite)
     }

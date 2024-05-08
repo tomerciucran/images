@@ -49,6 +49,8 @@ final class ImagesGridViewModelTests: XCTestCase {
         await sut.fetchImages()
         
         XCTAssertTrue(sut.images.isEmpty)
+        XCTAssertNotNil(sut.error)
+        XCTAssertTrue(sut.showsErrorAlert)
     }
     
     func test_handleImageTap() {
